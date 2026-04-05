@@ -1,2 +1,231 @@
-# NATURALDINING
-料理教室・テーブルコーディネート・おもてなし教室
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NATURAL DINING</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #fafafa;
+  color: #333;
+}
+
+/* ファーストビュー */
+.hero {
+  position: relative;
+  height: 60vh;
+  background: url("images/main.jpg") center/cover no-repeat;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 32px;
+  letter-spacing: 3px;
+}
+
+/* セクション */
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+/* ギャラリー */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* カード */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* ボックス */
+.box {
+  background: white;
+  border-left: 4px solid #b48a78;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Instagramボタン */
+.insta-btn {
+  display: block;
+  text-align: center;
+  background: linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+/* ボタン */
+button {
+  width: 100%;
+  padding: 15px;
+  background: #b48a78;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+}
+
+/* ライトボックス */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox img {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.lightbox:target {
+  display: block;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #aaa;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ファーストビュー -->
+<div class="hero">
+  <div class="hero-text">
+    <h1>NATURAL DINING</h1>
+    <p>おもてなしを、もっと気軽に</p>
+  </div>
+</div>
+
+<section>
+  <p>
+    約3ヶ月ごとにテーマを変えて、季節に合わせたテーブルコーディネートと簡単なおもてなし料理をご紹介しています。<br><br>
+    料理のジャンルも和洋中エスニックアジアンと様々です。<br>
+    日々の暮らしの延長に、素敵なおもてなし空間を気軽に実現できたら楽しいですよね！
+  </p>
+
+  <a href="https://instagram.com/naturaldining" target="_blank" class="insta-btn">
+    Instagramを見る
+  </a>
+</section>
+
+<section>
+  <h2>LESSON</h2>
+
+  <div class="card">
+    <p>◆ 毎回テーブルコーディネートとお料理が同時に学べ、最後は楽しくランチ</p>
+    <p>◆ 完結型レッスンで好きなタイミングで参加OK</p>
+    <p>◆ デモ形式で初心者も安心</p>
+    <p>◆ 2025年12月で20周年</p>
+  </div>
+
+  <div class="box">
+    <h3>こんな方におすすめ</h3>
+    <p>◆ テーブルコーディネートを学びたい</p>
+    <p>◆ おもてなし料理を身につけたい</p>
+    <p>◆ 暮らしを楽しみたい</p>
+  </div>
+</section>
+
+<section>
+  <h2>PRICE</h2>
+  <div class="card">
+    <p>レッスン料金</p>
+    <p style="font-size:22px;color:#b48a78;">10,000円（税込）</p>
+  </div>
+</section>
+
+<section>
+  <h2>SCHEDULE</h2>
+  <div class="card">
+    <p>開催日：月・水・金</p>
+    <p>時間：10:30〜13:30</p>
+  </div>
+</section>
+
+<section>
+  <h2>PAST LESSON GALLERY</h2>
+
+  <div class="gallery">
+    <a href="#img1"><img src="images/lesson1.jpg"></a>
+    <a href="#img2"><img src="images/lesson2.jpg"></a>
+    <a href="#img3"><img src="images/lesson3.jpg"></a>
+  </div>
+</section>
+
+<section>
+  <h2>RESERVE</h2>
+  <button>ご予約・お問い合わせ</button>
+</section>
+
+<!-- ライトボックス -->
+<div id="img1" class="lightbox">
+  <a href="#"><img src="images/lesson1.jpg"></a>
+</div>
+
+<div id="img2" class="lightbox">
+  <a href="#"><img src="images/lesson2.jpg"></a>
+</div>
+
+<div id="img3" class="lightbox">
+  <a href="#"><img src="images/lesson3.jpg"></a>
+</div>
+
+<footer>
+  <p>© NATURAL DINING</p>
+</footer>
+
+</body>
+</html>
